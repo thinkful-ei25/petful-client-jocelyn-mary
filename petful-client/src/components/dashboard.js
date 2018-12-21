@@ -3,7 +3,7 @@ import React from 'react';
 // import { connect } from 'react-redux';
 // import { Link } from 'react-router-dom';
 import DogComponent from './dogcomponent'
-
+import CatComponent from './catcomponent'
 
 
 
@@ -20,7 +20,7 @@ export default function Dashboard(props) {
 
            <section className="catToAdopt">
            Cats To Adopt
- 
+<CatComponent/>
            </section>
             </div>
         </React.Fragment>
