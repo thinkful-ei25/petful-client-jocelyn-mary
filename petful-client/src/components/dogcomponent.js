@@ -8,10 +8,13 @@ export class DogComponent extends React.Component{
   }
 
 render(){
-  const dog = this.props.dog.name;
+  if(!this.props.dog){
+    return <p>loading...</p>
+  }
+  const dogName = this.props.dog.name;
   return(
   
-  <span>{dog}</span>
+  <span>{dogName}</span>
 
   )
 }
@@ -19,7 +22,7 @@ render(){
 }
 const mapStateToProps = state =>{
   return{
-    dog: state.petsReducer.dog
+    dog: state.dog
   };
 };
 

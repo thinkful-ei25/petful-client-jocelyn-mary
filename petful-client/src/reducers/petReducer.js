@@ -6,11 +6,11 @@ import { FETCH_DOG_FAIL,FETCH_DOG_SUCCESS } from "../actions/dogAction";
 
 const initialState = {
   error: null,
-  cat:[], 
-  dog:[]
+  cat:null, 
+  dog:null
 }; 
 
-export default function petsReducer(state = initialState, action) {
+export default function petReducer(state = initialState, action) {
   if(action.type === FETCH_CAT_SUCCESS){
     return {
       ...state, cat: action.cat
